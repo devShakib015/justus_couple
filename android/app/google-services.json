@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "929694802433",
+    "project_id": "justus-couple",
+    "storage_bucket": "justus-couple.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929694802433:android:472feb88e6a673a0e5d600",
+        "android_client_info": {
+          "package_name": "com.devshakib.justus_couple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929694802433-e500ulnbgtmol79u0b11gk1p5o9n8rfj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIy6wXYYjgP6vRAbIOCgmzi2XHuNRktUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929694802433-e500ulnbgtmol79u0b11gk1p5o9n8rfj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
