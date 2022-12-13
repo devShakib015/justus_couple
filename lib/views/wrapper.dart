@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:justus_couple/views/chat/chat_page.dart';
 import 'package:justus_couple/views/home/home_page.dart';
-import 'package:justus_couple/views/settings/settings_page.dart';
+import 'package:justus_couple/views/profile/profile_page.dart';
 
 class Wrapper extends StatefulWidget {
   const Wrapper({super.key});
@@ -31,13 +31,13 @@ class _WrapperState extends State<Wrapper> {
             selectedIcon: Icon(Icons.message),
           ),
           NavigationDestination(
-            icon: Icon(Icons.settings_outlined),
-            label: 'Settings',
-            selectedIcon: Icon(Icons.settings),
+            icon: Icon(Icons.person_outline),
+            label: 'Profile',
+            selectedIcon: Icon(Icons.person),
           ),
         ],
       ),
-      body: const [HomePage(), ChatPage(), SettingsPage()][_selectedIndex],
+      body: const [HomePage(), ChatPage(), PofilePage()][_selectedIndex],
     );
   }
 }

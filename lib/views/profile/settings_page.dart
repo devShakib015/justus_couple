@@ -12,7 +12,6 @@ class SettingsPage extends ConsumerWidget {
         title: const Text('Settings'),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -28,7 +27,25 @@ class SettingsPage extends ConsumerWidget {
               leading: const Icon(Icons.logout),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () async {
-                await FirebaseAuth.instance.signOut();
+                await showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                          title: const Text('Are you sure you want to logout?'),
+                          actions: [
+                            TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: const Text('Cancel')),
+                            TextButton(
+                                onPressed: () async {
+                                  await FirebaseAuth.instance
+                                      .signOut()
+                                      .then((value) {
+                                    Navigator.pop(context);
+                                  });
+                                },
+                                child: const Text('Logout')),
+                          ],
+                        ));
               },
             ),
             const Divider(),

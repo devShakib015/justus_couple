@@ -26,7 +26,15 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: AppConstants.appName,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true, primarySwatch: Colors.red),
+      theme: ThemeData(
+          useMaterial3: true,
+          primarySwatch: Colors.red,
+          brightness: Brightness.light),
+      darkTheme: ThemeData(
+          useMaterial3: true,
+          brightness: Brightness.dark,
+          primarySwatch: Colors.red),
+      themeMode: ThemeMode.system,
       builder: EasyLoading.init(),
       home: const LandingWidget(),
     );
